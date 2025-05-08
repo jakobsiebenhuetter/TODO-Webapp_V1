@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Eingang - Meine Todos</title>
+    <link rel="icon" href="/icons/icons8-favicon-30.png ">
+    <link rel="stylesheet" href="styles/todo.css" />
+    <script src="app-spa-script.js" defer></script>
+  </head>
+  <body>
+   
+    <main>
+      <div class="sidebar__container">
+        <ul class="sidebar__menu">
+          <li class="sidebar__item" id="sidebar__item--user"><div class="avatar"></div><button></button></li>
+          <span data-token="<%= locals.csrfToken %>"></span>
+          <li class="sidebar__item" id="add-task-btn"><button>Aufgabe hinzufügen</button></li>
+          <li class="sidebar__item"><button>Alle Tasks</button></li>
+        </ul>
+      </div>
+
+      <div class="backdrop" id="backdrop"></div>
+      <div class="task-window" id="task-window"></div>
+
+      <div class="modal" id="add-task-modal">
+       
+        <form class="modal__body">
+          <section class="modal__body__section__one">
+            <p class="modal__task__title__wrapper">             
+              <textarea class="modal__task__title" type="text" name="task-title" id="task-title" placeholder="Aufgabenname"></textarea>
+            </p>      
+            <p class="modal__task__title__wrapper">
+              <input class="modal__task__description" type="text" name="task-description" id="task-description" placeholder="Beschreibung">          
+            </p>     
+          </section>
+
+            <section class="modal__body__section__two">
+
+              <div class="modal__body__section__two__date">
+                <span class="modal__body__section__two__input">Fälligkeitsdatum</span>
+                  <input type="date" class="modal__body__section__two__input--date" name="date" id="date">
+                </div>
+                <select name="priority" id="priority">
+                  <option value="" disabled selected>Priorität</option>
+                </select>
+            </section>
+            <hr>
+            <div class="modal__footer">
+              <button class="modal__button modal__button--cancel" type="reset" id="reset-btn">Abbrechen</button>
+              <button class="modal__button modal__button--submit" type="button" id="new-task-btn">Aufgabe hinzufügen</button>     
+            </div>
+          </div>    
+        </form>
+
+      <div class="modal" id="task__modal">
+        <div>
+          <p>Titel</p>
+        <p>Description</p>
+      </div>
+      </div>
+
+      <div id="main">
+        <div id="main-header"></div>
+          <div>
+            <ul class="tasklist__body task-list"></ul>  
+        </div>
+      </div>
+
+      <div id="comment-window"></div>
+
+    </main>
+  </body>
+ 
+</html>
