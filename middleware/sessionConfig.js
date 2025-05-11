@@ -5,7 +5,7 @@ const mysqlStore = require('express-mysql-session');
 const MySQLStore = mysqlStore(session);
 const sessionStore = new MySQLStore({
     host: process.env.HOST,
-    port: process.env.PORT,
+    port: process.env.DB_PORT,
     user: process.env.USER,
     database: process.env.DATABASE,
     password: process.env.PASSWORD,
