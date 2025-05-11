@@ -1,0 +1,40 @@
+<nav class="navbar">
+
+    <div class="navbar__brand" >
+      <a href="/home">Todo App</a>
+    </div>
+
+    <div class="navbar__content">
+      <ul>
+        <li class="navbar__item--news">
+          <a href="/information-app">Erkunde unsere App</a>
+        </li>
+        <li class="navbar__item--features">
+          <a href="/updates">Updates</a>
+        </li>
+      </ul>
+      <div class="navbar__divider"></div>
+      <ul class="navbar__items--actions" >
+        <li class="navbar__item--features">
+          <a href="/features">Features</a>
+        </li>
+
+        <% if(locals.isAuth) { %>
+          <li>
+            <span  class="navbar__link--cta logout">Log dich aus</span>
+            <input type="hidden" value="<%= locals.csrfToken %>">
+          </li>
+          
+          <% } else if (!locals.isAuth) { %>
+        <li>
+          <a href="/login">Anmelden</a>
+        </li>
+        <% } %>
+
+        <li class="navbar__item--signup">
+          <a class="navbar__link--cta" href="/signup">Kostenlos nutzen</a>
+        </li>
+      </ul>
+    </div>
+
+</nav>

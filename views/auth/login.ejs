@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bei Meine Todos anmelden</title>
+    <link rel="icon" href="/icons/icons8-favicon-30.png ">
+    <link rel="stylesheet" href="/styles/form.css">
+   
+
+  </head>
+  <body>
+      <header>
+        <nav>
+          <div>
+            <a href="/home" class="logo"><img src="/icons/icons8-favicon-30.png" alt="logo"><p>Meine Todos</p></a>
+          </div>
+        </nav>
+      </header>
+
+    <main>
+      <section>
+        <h1>Anmelden</h1>
+        <% if(message) { %>
+        <p class="error"><%= message.message %></p>
+        <% } %>
+        <form action="/login" method="POST">
+
+          <%- include('../includes/auth-form') %>
+
+          <p>
+            <button class="red-btn">Anmelden</button>
+          </p>
+        </form>
+        <p class="signup">
+         <span>Noch kein Konto?</span><a href="/signup">Registriere dich</a>
+        </p>
+      </section>
+      <section class="second-section">
+        <img src="/to-do-4783676_640.png" alt="logo">
+      </section>
+    </main>
+  </body>
+</html>
