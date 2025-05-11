@@ -4,7 +4,7 @@
   "description": "Todo App (Website)",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "Jakob Siebenhuetter",
   "license": "ISC",
