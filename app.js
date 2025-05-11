@@ -35,6 +35,6 @@ app.use(commentRoutes);
 
 app.use(errorHandler);
 
-app.listen(3000, () => {
-    console.log("Server horcht auf Port 3000");    
+app.listen( process.env.APPPORT || 3000 , () => {
+    console.log(`Server aktiv, auf Port ${process.env.APPPORT}`);    
 });
