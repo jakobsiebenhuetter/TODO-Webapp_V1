@@ -1,4 +1,4 @@
-# Mein To-Do App Projekt 📝
+# To-Do App Projekt 📝
 
 Eine selbst programmierte To-Do App, inspiriert von modernen Task-Managern.
 
